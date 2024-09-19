@@ -1,6 +1,3 @@
-# EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM AND DISPLAY STRING
-
-
  ## Aim: To Interface a 16X2 LCD display to ARM controller  , and simulate it in Proteus 
 ## Components required: STM32 CUBE IDE, Proteus 8 simulator .
 ## Theory 
@@ -177,29 +174,36 @@ https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
 #include "main.h"
 #include"lcd.h"
 
- MX_GPIO_Init();
   MX_GPIO_Init();
-      Lcd_PortType ports[] = {GPIOA,GPIOA,GPIOA,GPIOA};
-      Lcd_PinType pins[] = {GPIO_PIN_3,GPIO_PIN_2,GPIO_PIN_1,GPIO_PIN_0};
-      Lcd_HandleTypeDef lcd;
-      lcd = Lcd_create(ports,pins,GPIOB,GPIO_PIN_0,GPIOB,GPIO_PIN_1,LCD_4_BIT_MODE);
-      Lcd_cursor(&lcd, 0,1);
-      Lcd_string(&lcd, "212222240059");
 
-      Lcd_cursor(&lcd, 1,1);
-      Lcd_string(&lcd, "MALLU JAGADEESWAR REDDY");
-
+  Lcd_PortType ports[] = {GPIOA,GPIOA,GPIOA,GPIOA};
+    Lcd_PinType pins[] = {GPIO_PIN_3,GPIO_PIN_2,GPIO_PIN_1,GPIO_PIN_0};
+    Lcd_HandleTypeDef lcd;
+    lcd = Lcd_create(ports,pins,GPIOB,GPIO_PIN_0,GPIOB,GPIO_PIN_1,LCD_4_BIT_MODE);
+    Lcd_cursor(&lcd,0,0);
+    Lcd_string(&lcd, "DEPT: AI-ML");
+    Lcd_cursor(&lcd, 1,0);
+    Lcd_string(&lcd, "JAGADEESH");
 ```
 
+
+
 ## Output screen shots of proteus  :
- ![exp4 pmc](https://github.com/Yogabharathi3/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/118899387/7e9da4e3-8c45-4cff-83d7-8394ed1eb79e)
+# LED is off:
+
+![4 3](https://github.com/user-attachments/assets/354fdc9b-cbc3-4ccb-810a-76bf82cc2f49)
+
+# LED is on:
+
+
+![7bdc7454-da75-4d87-be0f-c23c59cb46ff](https://github.com/user-attachments/assets/808f1670-d932-4501-96c8-d81fc69b082f)
+
 
  
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
-![PMCCCCCCCCC](https://github.com/Yogabharathi3/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/118899387/f6e4d704-5f5f-4ade-b025-c963bebe25f4)
-
-
  
+ ![4 2](https://github.com/user-attachments/assets/b56df196-d95e-426f-bb7b-5ab17063acbc)
+
 ## Result :
 Interfacing a lcd display with ARM microcontroller are simulated in proteus and the results are verified.
 
